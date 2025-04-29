@@ -1,0 +1,258 @@
+        :root {  
+            --primary-blue: #1e3799; /* Biru Navy */  
+            --vibrant-yellow: #ffd32a; /* Kuning Cerah */  
+            --accent-orange: #ff9f1a; /* Oranye */  
+            --big-font: 5rem;  
+            --h2-font: 3rem;  
+            --p-font: 1rem;  
+            --h1-font: 7rem;  
+            --font1: sans-serif;  
+            --font2: arial;  
+        }  
+
+        body {  
+            background-color: lightgray;  
+        }  
+
+        header {  
+            display: block;  
+            text-align: center; /* Pusatkan horizontal */  
+        }  
+
+        header h1 {  
+            display: inline-block;  
+            align-items: center;  
+            vertical-align: middle;  
+        }  
+
+        a {  
+            color: var(--primary-blue);  
+        }  
+
+        a::before {  
+            content: '';  
+            position: absolute;  
+            top: 0;  
+            left: 0;  
+            width: 0%;  
+            height: 100%;  
+            background-color: var(--primary-blue);  
+            transition: width 0.3s ease-out;  
+            z-index: -1;  
+            border-radius: 8px;  
+        }  
+
+        #BG {  
+            position: static;  
+            width: 100%;  
+            height: 300px;  
+            overflow: hidden;  
+        }  
+
+        #BG img {  
+            width: 100%;  
+            object-fit: cover;  
+            height: 5px;  
+            min-height: 100%;  
+            object-position: 40% 40%;  
+        }  
+
+        nav {  
+            display: flex;  
+            justify-content: space-between;  
+            align-items: center;  
+            background-color: var(--primary-blue);  
+            padding: 2px 5%;  
+        }  
+
+        nav a {  
+            position: relative;  
+            color: var(--vibrant-yellow); /* Warna teks kuning */  
+            font-size: 32px;  
+            font-weight: 500;  
+            margin: 0 20px;  
+            padding: 2px 10px;  
+            z-index: 2;  
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);  
+            border-radius: 8px; /* Menjaga sudut halus */  
+        }  
+
+        /* Hover and Focus State */  
+        nav a:hover,  
+        nav a:focus {  
+            background-color: var(--vibrant-yellow); /* Background kuning */  
+            color: var(--primary-blue); /* Teks berwarna biru */  
+        }  
+
+        /* Menjaga state setelah diklik */  
+        nav a:focus {  
+            outline: none; /* Menghilangkan outline default */  
+        }  
+
+        /* Memastikan warna teks kembali setelah hover/focus */  
+        nav a:not(:hover):not(:focus) {  
+            background-color: var(--primary-blue); /* Warna background biru */  
+            color: var(--vibrant-yellow); /* Warna teks kuning */  
+        }  
+
+        /* Efek underline saat hover */  
+        nav a::before {  
+            content: '';  
+            position: absolute;  
+            top: 0;  
+            left: 0;  
+            width: 0%;  
+            height: 100%;  
+            background-color: var(--primary-blue);  
+            transition: width 0.3s ease-out;  
+            z-index: -1;  
+            border-radius: 8px;  
+        }  
+
+        nav a:hover::before {  
+            width: 100%;  
+        }  
+
+        nav a:hover {  
+            transform: translateY(-3px); /* Efek angkat saat hover */  
+        }  
+
+        ul {  
+            list-style-type: none;  
+            padding: 2px;  
+            display: inline-flex;  
+        }  
+
+        li {  
+            padding-left: 20px;  
+            font-size: 24px;  
+        }  
+
+        header a:active {  
+            color: var(--primary-blue);  
+        }  
+
+        header a:link,  
+        header a:visited {  
+            color: var(--primary-blue);  
+            text-decoration: none;  
+        }  
+
+        nav a:hover,  
+        nav a:focus {  
+            background-color: var(--vibrant-yellow);  
+        }  
+
+        nav a h3:hover,  
+        nav a h3:focus {  
+            color: var(--primary-blue);  
+        }  
+
+        h1 {  
+            font-family: var(--font1);  
+            color: var(--primary-blue);  
+            font-size: 48px;  
+        }  
+
+        main {  
+            display: block;  
+            text-align: center;  
+            background-color: white;  
+        }  
+
+        main p {  
+            font-family: var(--font2);  
+            text-align: justify;  
+            padding: 0 40px;  
+            font-size: 28px;  
+        }  
+
+        #FlexImages {  
+            display: flex;  
+            flex-wrap: wrap;  
+            justify-content: space-evenly;  
+            padding-bottom: 10px;  
+        }  
+
+        #FlexImages img {  
+            width: 500px;  
+            height: auto;  
+            margin: 10px;  
+            vertical-align: middle;  
+            opacity: 0.3; /* Opacity harus berupa angka desimal antara 0 dan 1 */  
+            transition: opacity 0.5s ease-in-out;  
+            border: 5px solid var(--primary-blue); /* Mengatur border dengan warna dari variable */  
+            box-sizing: border-box; /* Memastikan border dihitung dalam lebar dan tinggi total */  
+        }  
+
+        #FlexImages img:hover {  
+            opacity: 100%; /* Menampilkan gambar sepenuhnya saat hover */  
+        }  
+
+        #GridImages {  
+            display: grid;  
+            position: relative; /* Mengatur posisi relatif untuk konten yang ada di dalamnya */  
+            justify-content: center; /* Memusatkan grid */  
+            grid-template-columns: repeat(3, 1fr); /* 3 kolom dengan ukuran yang sama */  
+            gap: 10px; /* Jarak antar item grid */  
+            padding: 10px; /* Padding di dalam grid */  
+        }  
+
+        #GridImages img {  
+            width: 100%; /* Memanfaatkan lebar kolom grid */  
+            height: auto; /* Menyimpan rasio aspek gambar */  
+            opacity: 0.5; /* Opacity dasar */  
+            transition: opacity 0.5s ease-in-out; /* Transisi untuk opacity */  
+            border: 5px solid var(--primary-blue); /* Border berwarna biru */  
+            box-sizing: border-box; /* Menghitung padding dan border dalam total ukuran */  
+        }  
+
+        /* Border Radius untuk Gambar Ganjil */  
+        #GridImages img:nth-child(odd) {  
+            border-radius: 20px; /* Radius untuk gambar ganjil */  
+        }  
+
+        /* Border Radius untuk Gambar Genap */  
+        #GridImages img:nth-child(even) {  
+            border-radius: 50px; /* Radius untuk gambar genap */  
+        }  
+
+        /* Efek saat hover */  
+        #GridImages img:hover {  
+            opacity: 1; /* Menampilkan gambar pada opacity penuh saat hover */  
+            animation: spin 0.5s linear forwards; /* Melakukan animasi saat hover */  
+        }  
+
+        /* Definisi animasi spin */  
+        @keyframes spin {  
+            0% {  
+                transform: rotateY(0deg); /* Awal rotasi */  
+            }  
+            100% {  
+                transform: rotateY(180deg); /* Akhir rotasi (180 derajat) */  
+            }  
+        }  
+
+        footer {  
+            display: flex;  
+            justify-content: center;  
+            align-items: center; /* Membuat konten footer tengah secara vertikal */  
+            background-color: var(--primary-blue); /* Pastikan bahwa variabel ini didefinisikan dalam CSS */  
+            padding: 20px 0; /* Menambahkan padding vertikal agar konten tidak terlalu rapat */  
+        }  
+
+        footer p {  
+            font-family: var(--font2); /* Pastikan bahwa variabel ini didefinisikan dalam CSS */  
+            color: white;  
+            padding: 0 40px; /* Memberi padding horizontal */  
+            font-size: 18px;  
+            margin: 0; /* Mengurangi margin default dari elemen p */  
+        }  
+
+        footer a:link,  
+        footer a:visited,  
+        footer a:hover,  
+        footer a:active {  
+            color: var(--vibrant-yellow) !important; /* Pastikan bahwa variabel ini didefinisikan dalam CSS */  
+            text-decoration: none !important; /* Menghapus garis bawah dari tautan */  
+        }

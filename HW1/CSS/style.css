@@ -1,0 +1,103 @@
+:root {
+      --primary-blue: #1e3799;    /* Biru Navy */  
+      --vibrant-yellow: #ffd32a;  /* Kuning Cerah */  
+      --accent-orange: #ff9f1a;   /* Oranye */ 
+    --big-font: 5rem;
+    --h2-font: 3rem;
+    --p-font: 1rem;
+    --h1-font: 7rem;
+    --font1: sans-serif;
+    --font2: arial;
+}
+body{
+    background-color: lightgray;
+}
+header{
+    display: block;
+    text-align: center; /* Pusatkan horizontal */ 
+}
+header img, header h1{
+    display: inline-block;
+    align-items: center;
+    vertical-align: middle;
+}
+header div img{
+    transform: rotate(90deg);
+    width: 10%;
+    height: auto;
+}
+header div{
+    margin-bottom: 30px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-blue);
+    padding: 2px 5%;
+}
+ul{
+    list-style-type: none;
+    padding: 2px;
+    display: inline-flex;
+}
+li{
+    padding-left: 20px;
+}
+header nav a:link,   
+header nav a:visited,   
+header nav a:hover,   
+header nav a:active {  
+  color: var(--vibrant-yellow) !important;  
+  text-decoration: none !important;  
+}  
+h1{
+    font-family: var(--font1);
+    color: var(--primary-blue);
+    font-size: 48px;
+}
+main p{
+    font-family: var(--font2);
+    background-color: white;
+    text-align: justify;
+    padding: 0 40px;
+    font-size: 28px;
+}
+main{
+    display: block;
+    text-align: center;
+}
+main div{
+    width: 70%;
+    height: 140px;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 6px;
+    display: inline-block;
+    text-align: center;
+    background-color: white;
+}
+main div img{
+    align-items: center;
+    vertical-align: middle;
+}
+footer{
+    display: block;
+    height : 30px;
+    text-align: center;
+    background-color: var(--primary-blue);
+}
+footer p{
+    font-family: var(--font2);
+    color: white;
+    padding: 0 40px;
+    font-size: 18px;
+}
+
+footer a:link,   
+footer a:visited,   
+footer a:hover,   
+footer a:active {  
+  color: var(--vibrant-yellow) !important;  
+  text-decoration: none !important;  
+} 
